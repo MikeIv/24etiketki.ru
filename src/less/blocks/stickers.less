@@ -17,15 +17,32 @@
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  background-color: @base;
+  margin-top: 50px;
+  background-color: @white;
 }
 
 .stickers__header-block {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  margin-bottom: 100px;
+  margin-bottom: 100;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 70px;
+  padding-right: 70px;
   text-align: center;
-  font-size: 68px;
+  font-size: 48px;
   font-weight: 300;
+  text-transform: uppercase;
+  color: @light;
+  background-color: fade(@light, 30%);
+  border-radius: 10px;
+
+  &:hover {
+    background-color: fade(@light, 80%);
+  }
+}
+
+.stickers__header-link {
+  text-decoration: none;
   color: @white;
 }
 
@@ -61,6 +78,11 @@
   flex-direction: column;
   align-items: center;
   flex-basis: 500px;
+
+  &--line {
+    padding-left: 30px;
+    border-left: 1px solid @light;
+  }
 }
 
 .stickers__image {
@@ -109,8 +131,9 @@
   flex-direction: column;
   align-items: center;
 
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: left;
+  text-transform: uppercase;
 
   &--time {
     font-size: 38px;
@@ -124,6 +147,12 @@
     padding-left: 60px;
     padding-right: 60px;
     background-color: @light;
+    text-transform: none;
+  }
+
+  &--bold {
+    font-size: 30px;
+    line-height: 38px;
   }
 }
 

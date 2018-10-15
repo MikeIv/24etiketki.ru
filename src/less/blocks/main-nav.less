@@ -17,16 +17,48 @@
 .main-nav__list {
   display: flex;
   align-items: center;
-  flex-basis: 80%;
+
+
+  .xxs-block({
+    flex-direction: column;
+  width: auto;
+
+  });
+
+  .md-block({
+    flex-direction: row;
+    flex-basis: 80%;
+
+  });
 }
 
 .main-nav__item {
-  margin-right: 40px;
+
+
+  .xxs-block({
+    margin-right: 0;
+
+  });
+
+  .md-block({
+    margin-right: 40px;
+
+  });
 
   &--txt {
-    flex-basis: 450px;
+
     border-left: 1px solid @base;
     padding-left: 30px;
+
+    .xxs-block({
+      flex-basis: 50px;
+
+    });
+
+    .md-block({
+      flex-basis: 450px;
+
+    });
 
   }
 

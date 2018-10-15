@@ -197,13 +197,8 @@ body {
 .main-nav__list {
   display: flex;
   align-items: center;
-  flex-basis: 80%;
-}
-.main-nav__item {
-  margin-right: 40px;
 }
 .main-nav__item--txt {
-  flex-basis: 450px;
   border-left: 1px solid #771032;
   padding-left: 30px;
 }
@@ -223,6 +218,7 @@ body {
 }
 .image-block {
   width: 100%;
+  margin-top: 100px;
 }
 .image-block__full {
   display: flex;
@@ -255,14 +251,29 @@ body {
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  background-color: #771032;
+  margin-top: 50px;
+  background-color: #ffffff;
 }
 .stickers__header-block {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  margin-bottom: 100px;
+  margin-bottom: 100;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 70px;
+  padding-right: 70px;
   text-align: center;
-  font-size: 68px;
+  font-size: 48px;
   font-weight: 300;
+  text-transform: uppercase;
+  color: #E51F60;
+  background-color: rgba(229, 31, 96, 0.3);
+  border-radius: 10px;
+}
+.stickers__header-block:hover {
+  background-color: rgba(229, 31, 96, 0.8);
+}
+.stickers__header-link {
+  text-decoration: none;
   color: #ffffff;
 }
 .stickers__items {
@@ -293,6 +304,10 @@ body {
   align-items: center;
   flex-basis: 500px;
 }
+.stickers__txt-block--line {
+  padding-left: 30px;
+  border-left: 1px solid #E51F60;
+}
 .stickers__image {
   display: flex;
   flex-direction: column;
@@ -321,7 +336,7 @@ body {
 }
 .stickers__header2 {
   margin-bottom: 20px;
-  font-size: 28px;
+  font-size: 34px;
   line-height: 36px;
   font-weight: 500;
   color: #771032;
@@ -330,16 +345,17 @@ body {
   text-align: center;
 }
 .stickers__header3 {
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   font-size: 22px;
-  line-height: 30px;
+  line-height: 28px;
   font-weight: 400;
   color: #771032;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: left;
+  text-transform: uppercase;
 }
 .stickers__header3--time {
   font-size: 38px;
@@ -352,6 +368,11 @@ body {
   padding-left: 60px;
   padding-right: 60px;
   background-color: #E51F60;
+  text-transform: none;
+}
+.stickers__header3--bold {
+  font-size: 30px;
+  line-height: 38px;
 }
 .stickers__link {
   font-size: 24px;
@@ -419,6 +440,16 @@ body {
     padding-left: 10px;
     padding-right: 10px;
   }
+  .main-nav__list {
+    flex-direction: column;
+    width: auto;
+  }
+  .main-nav__item {
+    margin-right: 0;
+  }
+  .main-nav__item--txt {
+    flex-basis: 50px;
+  }
   .stickers__image {
     margin-top: 30px;
     margin-bottom: 40px;
@@ -450,6 +481,18 @@ body {
   .main-nav {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .main-nav__list {
+    flex-direction: row;
+    flex-basis: 80%;
+  }
+  .main-nav__item {
+    margin-right: 40px;
+  }
+  .main-nav__item--txt {
+    flex-basis: 450px;
   }
 }
 @media screen and (min-width: 1100px) {
