@@ -124,14 +124,14 @@ img {
   overflow: hidden;
 }
 .button {
-  background-color: #7c162e;
+  background-color: #771032;
   padding-left: 40px;
   padding-right: 40px;
   border-radius: 10px;
 }
 .button:hover {
-  background-color: #5C9CE6;
-  color: #003573;
+  background-color: #E51F60;
+  color: #40091B;
 }
 html {
   height: 100%;
@@ -181,6 +181,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   max-width: 1420px;
   margin: 0 auto;
   padding-left: 40px;
@@ -190,8 +191,32 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.main-nav__logo {
-  margin-right: 30px;
+.main-nav__logo-link {
+  margin-right: 50px;
+}
+.main-nav__list {
+  display: flex;
+  align-items: center;
+  flex-basis: 80%;
+}
+.main-nav__item {
+  margin-right: 40px;
+}
+.main-nav__item--txt {
+  flex-basis: 450px;
+  border-left: 1px solid #771032;
+  padding-left: 30px;
+}
+.main-nav__item--logo {
+  font-size: 0;
+}
+.main-nav__item-contact {
+  display: flex;
+  flex-direction: column;
+}
+.main-nav__txt {
+  color: #771032;
+  font-size: 24px;
 }
 .main {
   width: 100%;
@@ -200,33 +225,8 @@ body {
   width: 100%;
   height: auto;
 }
-.image-block__slide {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-.image-block__pict {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-}
-.image-block__pict-01 {
-  z-index: 10;
-  transition: 1.5s;
-}
-.image-block__pict-01:hover {
-  opacity: 0;
-}
-.image-block__pict-02 {
-  z-index: 5;
-}
 .image-block__full {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto;
 }
 .image-block__full img {
   width: 100%;
@@ -240,19 +240,27 @@ body {
 .stickers {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
   margin: 0 auto;
   margin-bottom: 50px;
-  max-width: 1000px;
+  width: 100%;
   overflow: hidden;
   transition: 1s;
 }
 .stickers__info {
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 10px;
-  margin-right: 10px;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #771032;
+}
+.stickers__header-block {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  font-size: 68px;
+  font-weight: 300;
+  color: #771032;
 }
 .stickers__items {
   display: flex;
@@ -274,12 +282,12 @@ body {
   align-items: center;
 }
 .stickers__image--border img {
-  border: 2px solid #5C9CE6;
+  border: 2px solid #E51F60;
   box-sizing: border-box;
   transition: 1s;
 }
 .stickers__image--border img:hover {
-  border: 2px solid #7c162e;
+  border: 2px solid #771032;
   opacity: 0.5;
   transition: 1s;
 }
@@ -288,7 +296,7 @@ body {
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
-  color: #7c162e;
+  color: #771032;
   margin-top: 60px;
   text-align: left;
 }
@@ -297,7 +305,7 @@ body {
   font-size: 28px;
   line-height: 36px;
   font-weight: 500;
-  color: #7c162e;
+  color: #771032;
   margin-top: 30px;
   text-align: left;
 }
@@ -306,7 +314,7 @@ body {
   font-size: 24px;
   line-height: 36px;
   font-weight: 400;
-  color: #7c162e;
+  color: #771032;
   margin-top: 20px;
   text-align: left;
 }
@@ -347,13 +355,6 @@ body {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .stickers__info {
-    margin-left: 1.5px;
-    margin-right: 1.5px;
-  }
-  .stickers__info {
-    width: calc(91.66666666666667% - 3px);
-  }
   .stickers__block {
     margin-left: 1.5px;
     margin-right: 1.5px;
@@ -379,16 +380,6 @@ body {
     padding-left: 5px;
     padding-right: 5px;
   }
-  .image-block {
-    margin-bottom: 70px;
-  }
-  .image-block__slide {
-    height: 300px;
-  }
-  .stickers__info {
-    margin-left: 3px;
-    margin-right: 3px;
-  }
   .stickers__block {
     margin-left: 3px;
     margin-right: 3px;
@@ -407,37 +398,12 @@ body {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .image-block__slide {
-    height: 350px;
-  }
-  .stickers__info {
-    margin-left: 6px;
-    margin-right: 6px;
-  }
   .stickers__block {
     margin-left: 6px;
     margin-right: 6px;
   }
 }
-@media screen and (min-width: 960px) {
-  .image-block__slide {
-    height: 400px;
-  }
-}
 @media screen and (min-width: 1100px) {
-  .image-block__slide {
-    height: 400px;
-  }
-  .stickers__info {
-    width: calc(50% - 12px);
-  }
-  .stickers__info {
-    display: block;
-    margin-bottom: 50px;
-    margin-left: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
   .stickers__block {
     width: calc(50% - 12px);
   }
@@ -458,8 +424,5 @@ body {
   .main-nav {
     padding-left: 40px;
     padding-right: 40px;
-  }
-  .image-block__slide {
-    height: 700px;
   }
 }

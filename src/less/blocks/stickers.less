@@ -1,29 +1,30 @@
 .stickers {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
   margin: 0 auto;
   margin-bottom: 50px;
-  max-width: 1000px;
+  width: 100%;
   overflow: hidden;
   transition: 1s;
 }
 
 .stickers__info {
-  .col();
-  .size-xxs(22);
-  .size-lg(12);
-
-  .lg-block({
-    display: block;
-    margin-bottom: 50px;
-    margin-left: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-  });
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  background-color: @base;
 }
 
+.stickers__header-block {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  font-size: 68px;
+  font-weight: 300;
+  color: @base;
+}
 
 .stickers__items {
   display: flex;
@@ -59,15 +60,9 @@
     }
   }
 
-  .xxs-block({
-    margin-top: 30px;
-    margin-bottom: 40px;
-  });
+  .xxs-block({ margin-top: 30px; margin-bottom: 40px; });
 
-  .lg-block({
-    margin-top: 0;
-    margin-bottom: 0;
-  });
+  .lg-block({ margin-top: 0; margin-bottom: 0; });
 }
 
 .stickers__header {
